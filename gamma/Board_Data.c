@@ -1,0 +1,414 @@
+#if !defined(BOARD_DATA_C)
+#define BOARD_DATA_C
+
+#include <inttypes.h>
+
+#if defined(OPT_BOARD_DATA)
+
+/* ------------------------------------------------------------ */
+/* This table is used to map from port number to the address of
+** the TRIS register for the port. This is used for setting the
+** pin direction.
+*/
+const uint32_t port_to_tris_PGM[] = {
+    NOT_A_PORT,                //index value 0 is not used
+
+#if defined(_PORTA)
+    (uint32_t)&TRISA,
+#else
+    NOT_A_PORT,
+#endif
+
+#if defined(_PORTB)
+    (uint32_t)&TRISB,
+#else
+    NOT_A_PORT,
+#endif
+
+#if defined(_PORTC)
+    (uint32_t)&TRISC,
+#else
+    NOT_A_PORT,
+#endif
+
+#if defined(_PORTD)
+    (uint32_t)&TRISD,
+#else
+    NOT_A_PORT,
+#endif
+
+#if defined(_PORTE)
+    (uint32_t)&TRISE,
+#else
+    NOT_A_PORT,
+#endif
+
+#if defined(_PORTF)
+    (uint32_t)&TRISF,
+#else
+    NOT_A_PORT,
+#endif
+
+#if defined(_PORTG)
+    (uint32_t)&TRISG,
+#else
+    NOT_A_PORT,
+#endif
+
+#if defined(_PORTH)
+    (uint32_t)&TRISH,
+#else
+    NOT_A_PORT,
+#endif
+
+#if defined(_PORTJ)
+    (uint32_t)&TRISJ,
+#else
+    NOT_A_PORT,
+#endif
+
+#if defined(_PORTK)
+    (uint32_t)&TRISK,
+#else
+    NOT_A_PORT,
+#endif
+    
+    NOT_A_PORT,
+};  
+
+
+const uint8_t digital_pin_to_port_PGM[] = {
+    _IOPORT_PE,    // 0: RE8
+    _IOPORT_PE,    // 1: RE9
+    _IOPORT_PC,    // 2: RC2
+    _IOPORT_PC,    // 3: RC1
+    _IOPORT_PF,    // 4: RF12
+    _IOPORT_PD,    // 5: RD0
+    _IOPORT_PC,    // 6: RC14
+    _IOPORT_PB,    // 7: RB8
+    _IOPORT_PF,    // 8: RF8
+    _IOPORT_PD,    // 9: RD1
+    _IOPORT_PD,    // 10: RD9
+    _IOPORT_PB,    // 11: RB9
+    _IOPORT_PB,    // 12: RB10
+    _IOPORT_PB,    // 13: RB14
+    _IOPORT_PB,    // 14: RB5
+    _IOPORT_PB,    // 15: RB4
+    _IOPORT_PB,    // 16: RB3
+    _IOPORT_PB,    // 17: RB2
+    _IOPORT_PB,    // 18: RB1
+    _IOPORT_PB,    // 19: RB0
+    _IOPORT_PA,    // 20: RA10
+    _IOPORT_PA,    // 21: RA15
+    _IOPORT_PA,    // 22: RA14
+    _IOPORT_PC,    // 23: RC13
+    _IOPORT_PD,    // 24: RD11
+    _IOPORT_PD,    // 25: RD10
+    _IOPORT_PD,    // 26: RD4
+    _IOPORT_PD,    // 27: RD5
+    _IOPORT_PA,    // 28: RA6
+    _IOPORT_PA,    // 29: RA3
+    _IOPORT_PF,    // 30: RF2
+    _IOPORT_PA,    // 31: RA7
+    _IOPORT_PG,    // 32: RG13
+    _IOPORT_PG,    // 33: RG12
+    _IOPORT_PG,    // 34: RG14
+};
+
+const uint16_t digital_pin_to_bit_mask_PGM[] = {
+    _BV(8),   // 0: RE8
+    _BV(9),   // 1: RE9
+    _BV(2),   // 2: RC2
+    _BV(1),   // 3: RC1
+    _BV(12),   // 4: RF12
+    _BV(0),   // 5: RD0
+    _BV(14),   // 6: RC14
+    _BV(8),   // 7: RB8
+    _BV(8),   // 8: RF8
+    _BV(1),   // 9: RD1
+    _BV(9),   // 10: RD9
+    _BV(9),   // 11: RB9
+    _BV(10),   // 12: RB10
+    _BV(14),   // 13: RB14
+    _BV(5),   // 14: RB5
+    _BV(4),   // 15: RB4
+    _BV(3),   // 16: RB3
+    _BV(2),   // 17: RB2
+    _BV(1),   // 18: RB1
+    _BV(0),   // 19: RB0
+    _BV(10),   // 20: RA10
+    _BV(15),   // 21: RA15
+    _BV(14),   // 22: RA14
+    _BV(13),   // 23: RC13
+    _BV(11),   // 24: RD11
+    _BV(10),   // 25: RD10
+    _BV(4),   // 26: RD4
+    _BV(5),   // 27: RD5
+    _BV(6),   // 28: RA6
+    _BV(3),   // 29: RA3
+    _BV(2),   // 30: RF2
+    _BV(7),   // 31: RA7
+    _BV(13),   // 32: RG13
+    _BV(12),   // 33: RG12
+    _BV(14),   // 34: RG14
+};
+
+const uint16_t digital_pin_to_timer_PGM[] = {
+    NOT_ON_TIMER,   // 0: RE8
+    NOT_ON_TIMER,   // 1: RE9
+    NOT_ON_TIMER,   // 2: RC2
+    NOT_ON_TIMER,   // 3: RC1
+    NOT_ON_TIMER,   // 4: RF12
+    NOT_ON_TIMER,   // 5: RD0
+    NOT_ON_TIMER,   // 6: RC14
+    NOT_ON_TIMER,   // 7: RB8
+    NOT_ON_TIMER,   // 8: RF8
+    NOT_ON_TIMER,   // 9: RD1
+    NOT_ON_TIMER,   // 10: RD9
+    NOT_ON_TIMER,   // 11: RB9
+    NOT_ON_TIMER,   // 12: RB10
+    NOT_ON_TIMER,   // 13: RB14
+    NOT_ON_TIMER,   // 14: RB5
+    NOT_ON_TIMER,   // 15: RB4
+    NOT_ON_TIMER,   // 16: RB3
+    NOT_ON_TIMER,   // 17: RB2
+    NOT_ON_TIMER,   // 18: RB1
+    NOT_ON_TIMER,   // 19: RB0
+    NOT_ON_TIMER,   // 20: RA10
+    NOT_ON_TIMER,   // 21: RA15
+    NOT_ON_TIMER,   // 22: RA14
+    NOT_ON_TIMER,   // 23: RC13
+    NOT_ON_TIMER,   // 24: RD11
+    NOT_ON_TIMER,   // 25: RD10
+    NOT_ON_TIMER,   // 26: RD4
+    NOT_ON_TIMER,   // 27: RD5
+    NOT_ON_TIMER,   // 28: RA6
+    NOT_ON_TIMER,   // 29: RA3
+    NOT_ON_TIMER,   // 30: RF2
+    NOT_ON_TIMER,   // 31: RA7
+    NOT_ON_TIMER,   // 32: RG13
+    NOT_ON_TIMER,   // 33: RG12
+    NOT_ON_TIMER,   // 34: RG14
+};
+
+const uint8_t digital_pin_to_analog_PGM[] = {
+    NOT_ANALOG_PIN,   // 0: RE8
+    NOT_ANALOG_PIN,   // 1: RE9
+    NOT_ANALOG_PIN,   // 2: RC2
+    NOT_ANALOG_PIN,   // 3: RC1
+    NOT_ANALOG_PIN,   // 4: RF12
+    NOT_ANALOG_PIN,   // 5: RD0
+    NOT_ANALOG_PIN,   // 6: RC14
+    NOT_ANALOG_PIN,   // 7: RB8
+    NOT_ANALOG_PIN,   // 8: RF8
+    NOT_ANALOG_PIN,   // 9: RD1
+    NOT_ANALOG_PIN,   // 10: RD9
+    NOT_ANALOG_PIN,   // 11: RB9
+    NOT_ANALOG_PIN,   // 12: RB10
+    NOT_ANALOG_PIN,   // 13: RB14
+    _BOARD_AN0,   // 14: RB5
+    _BOARD_AN1,   // 15: RB4
+    _BOARD_AN2,   // 16: RB3
+    _BOARD_AN3,   // 17: RB2
+    _BOARD_AN4,   // 18: RB1
+    _BOARD_AN5,   // 19: RB0
+    _BOARD_AN6,   // 20: RA10
+    NOT_ANALOG_PIN,   // 21: RA15
+    NOT_ANALOG_PIN,   // 22: RA14
+    NOT_ANALOG_PIN,   // 23: RC13
+    NOT_ANALOG_PIN,   // 24: RD11
+    NOT_ANALOG_PIN,   // 25: RD10
+    NOT_ANALOG_PIN,   // 26: RD4
+    NOT_ANALOG_PIN,   // 27: RD5
+    NOT_ANALOG_PIN,   // 28: RA6
+    NOT_ANALOG_PIN,   // 29: RA3
+    NOT_ANALOG_PIN,   // 30: RF2
+    NOT_ANALOG_PIN,   // 31: RA7
+    NOT_ANALOG_PIN,   // 32: RG13
+    NOT_ANALOG_PIN,   // 33: RG12
+    NOT_ANALOG_PIN,   // 34: RG14
+};
+
+const uint8_t analog_pin_to_channel_PGM[] = {
+    45,     // A0 => AN45 (RB5, 14)
+    4,     // A1 => AN4 (RB4, 15)
+    3,     // A2 => AN3 (RB3, 16)
+    2,     // A3 => AN2 (RB2, 17)
+    1,     // A4 => AN1 (RB1, 18)
+    0,     // A5 => AN0 (RB0, 19)
+    28,     // A6 => AN28 (RA10, 20)
+};
+
+const  uint8_t digital_pin_to_pps_out_PGM[] = {
+    _PPS_OUT(_PPS_RPE8R),
+    _PPS_OUT(_PPS_RPE9R),
+    _PPS_OUT(_PPS_RPC2R),
+    _PPS_OUT(_PPS_RPC1R),
+    _PPS_OUT(_PPS_RPF12R),
+    _PPS_OUT(_PPS_RPD0R),
+    _PPS_OUT(_PPS_RPC14R),
+    _PPS_OUT(_PPS_RPB8R),
+    _PPS_OUT(_PPS_RPF8R),
+    _PPS_OUT(_PPS_RPD1R),
+    _PPS_OUT(_PPS_RPD9R),
+    _PPS_OUT(_PPS_RPB9R),
+    _PPS_OUT(_PPS_RPB10R),
+    _PPS_OUT(_PPS_RPB14R),
+    _PPS_OUT(_PPS_RPB5R),
+    NOT_PPS_PIN,
+    _PPS_OUT(_PPS_RPB3R),
+    _PPS_OUT(_PPS_RPB2R),
+    _PPS_OUT(_PPS_RPB1R),
+    _PPS_OUT(_PPS_RPB0R),
+    NOT_PPS_PIN,
+    _PPS_OUT(_PPS_RPA15R),
+    _PPS_OUT(_PPS_RPA14R),
+    _PPS_OUT(_PPS_RPC13R),
+    _PPS_OUT(_PPS_RPD11R),
+    _PPS_OUT(_PPS_RPD10R),
+    _PPS_OUT(_PPS_RPD4R),
+    _PPS_OUT(_PPS_RPD5R),
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    _PPS_OUT(_PPS_RPF2R),
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+};
+
+const  uint8_t digital_pin_to_pps_in_PGM[] = {
+    _PPS_IN(_PPS_RPE8),
+    _PPS_IN(_PPS_RPE9),
+    _PPS_IN(_PPS_RPC2),
+    _PPS_IN(_PPS_RPC1),
+    _PPS_IN(_PPS_RPF12),
+    _PPS_IN(_PPS_RPD0),
+    _PPS_IN(_PPS_RPC14),
+    _PPS_IN(_PPS_RPB8),
+    _PPS_IN(_PPS_RPF8),
+    _PPS_IN(_PPS_RPD1),
+    _PPS_IN(_PPS_RPD9),
+    _PPS_IN(_PPS_RPB9),
+    _PPS_IN(_PPS_RPB10),
+    _PPS_IN(_PPS_RPB14),
+    _PPS_IN(_PPS_RPB5),
+    NOT_PPS_PIN,
+    _PPS_IN(_PPS_RPB3),
+    _PPS_IN(_PPS_RPB2),
+    _PPS_IN(_PPS_RPB1),
+    _PPS_IN(_PPS_RPB0),
+    NOT_PPS_PIN,
+    _PPS_IN(_PPS_RPA15),
+    _PPS_IN(_PPS_RPA14),
+    _PPS_IN(_PPS_RPC13),
+    _PPS_IN(_PPS_RPD11),
+    _PPS_IN(_PPS_RPD10),
+    _PPS_IN(_PPS_RPD4),
+    _PPS_IN(_PPS_RPD5),
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    _PPS_IN(_PPS_RPF2),
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+};
+
+const uint8_t output_compare_to_digital_pin_PGM[] = {
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+};
+
+const uint8_t external_int_to_digital_pin_PGM[] = {
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+};
+
+#if    (OPT_BOARD_INIT != 0)
+
+void _board_init(void) {
+
+}
+
+#endif
+#if    (OPT_BOARD_DIGITAL_IO != 0)
+
+int    _board_pinMode(uint8_t pin, uint8_t mode) {
+
+    return 0;
+
+}
+
+#endif
+#if    (OPT_BOARD_DIGITAL_IO != 0)
+
+int    _board_getPinMode(uint8_t pin, uint8_t * mode) {
+
+    return 0;
+
+}
+
+#endif
+#if    (OPT_BOARD_DIGITAL_IO != 0)
+
+int    _board_digitalWrite(uint8_t pin, uint8_t val) {
+
+    return 0;
+
+}
+
+#endif
+#if    (OPT_BOARD_DIGITAL_IO != 0)
+
+int    _board_digitalRead(uint8_t pin, uint8_t * val) {
+
+    return 0;
+
+}
+
+#endif
+#if (OPT_BOARD_ANALOG_READ != 0)
+
+int    _board_analogRead(uint8_t pin, int * val) {
+
+    return 0;
+
+}
+
+#endif
+#if (OPT_BOARD_ANALOG_READ != 0)
+
+int    _board_analogReference(uint8_t mode) {
+
+    return 0;
+
+}
+
+#endif
+#if (OPT_BOARD_ANALOG_WRITE != 0)
+
+int    _board_analogWrite(uint8_t pin, int val) {
+
+    return 0;
+
+}
+
+#endif
+#endif // OPT_BOARD_DATA
+
+/* ------------------------------------------------------------ */
+
+#endif    // BOARD_DATA_C
+
