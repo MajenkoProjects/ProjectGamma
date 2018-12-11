@@ -35,21 +35,21 @@ extern const uint8_t    digital_pin_to_pps_in_PGM[];
 
 #define _BOARD_NAME_ "Project Gamma"
 
-#define NUM_DIGITAL_PINS     35
-#define NUM_ANALOG_PINS      7
-#define NUM_OC_PINS          0
+#define NUM_DIGITAL_PINS     45
+#define NUM_ANALOG_PINS      10
+#define NUM_OC_PINS          9
 #define NUM_IC_PINS          0
 #define NUM_TCK_PINS         0
-#define NUM_INT_PINS         0
+#define NUM_INT_PINS         5
 
 #define NUM_DIGITAL_PINS_EXTENDED NUM_DIGITAL_PINS
 #define NUM_ANALOG_PINS_EXTENDED NUM_ANALOG_PINS
 
 #define NUM_SERIAL_PORTS     2
 #define NUM_SPI_PORTS        1
-#define NUM_DSPI_PORTS       2
+#define NUM_DSPI_PORTS       3
 #define NUM_I2C_PORTS        1
-#define NUM_DTWI_PORTS       1
+#define NUM_DTWI_PORTS       2
 
 #define NUM_LED              0
 #define NUM_BTN              0
@@ -58,22 +58,35 @@ extern const uint8_t    digital_pin_to_pps_in_PGM[];
 
 
 
+#define PIN_INT0             5
+#define PIN_INT1             2
+#define PIN_INT2             4
+#define PIN_INT3             3
+#define PIN_INT4             18
 
-#define PIN_BM1             33
 #define PIN_BACKLIGHT             29
-#define PIN_BM2             34
-#define PIN_RESET             31
-#define PIN_BSIG             28
 #define PIN_TEAR             30
+#define PIN_UP             35
+#define PIN_BSIG             28
+#define PIN_DOWN             36
+#define PIN_BM1             33
+#define PIN_RESET             31
+#define PIN_BM2             34
+#define PIN_RIGHT             38
+#define PIN_LEFT             37
+#define PIN_SD_CS             39
 #define PIN_BM0             32
 
 static const uint8_t A0     = 14;
 static const uint8_t A1     = 15;
 static const uint8_t A2     = 16;
 static const uint8_t A3     = 17;
-static const uint8_t A4     = 18;
 static const uint8_t A5     = 19;
 static const uint8_t A6     = 20;
+static const uint8_t A7     = 35;
+static const uint8_t A8     = 36;
+static const uint8_t A10     = 37;
+static const uint8_t A11     = 38;
 
 static const uint8_t MOSI   = 23;
 static const uint8_t MISO   = 24;
@@ -87,6 +100,10 @@ static const uint8_t PIN_DSPI1_SS     = 10;
 static const uint8_t PIN_DSPI1_MOSI   = 11;
 static const uint8_t PIN_DSPI1_MISO   = 12;
 static const uint8_t PIN_DSPI1_SCK    = 13;
+
+static const uint8_t PIN_DSPI2_MOSI   = 40;
+static const uint8_t PIN_DSPI2_MISO   = 41;
+static const uint8_t PIN_DSPI2_SCK    = 42;
 
 #if defined(OPT_BOARD_INTERNAL)
 #define OPT_BOARD_INIT          0   //board needs no special init code
@@ -142,6 +159,19 @@ static const uint8_t PIN_DSPI1_SCK    = 13;
 #define _DSPI1_MOSI_OUT        PPS_OUT_SDO3
 #define _DSPI1_MOSI_PIN        11
 
+#define _DSPI2_BASE            _SPI5_BASE_ADDRESS
+#define _DSPI2_ERR_IRQ         _SPI5_FAULT_VECTOR
+#define _DSPI2_RX_IRQ          _SPI5_RX_VECTOR
+#define _DSPI2_TX_IRQ          _SPI5_TX_VECTOR
+#define _DSPI2_VECTOR          _SPI5_FAULT_VECTOR
+#define _DSPI2_IPL_ISR         IPL3SRS
+#define _DSPI2_IPL             3
+#define _DSPI2_SPL             0
+#define _DSPI2_MISO_IN         PPS_IN_SDI5
+#define _DSPI2_MISO_PIN        41
+#define _DSPI2_MOSI_OUT        PPS_OUT_SDO5
+#define _DSPI2_MOSI_PIN        40
+
 #define _DTWI0_BASE            _I2C1_BASE_ADDRESS
 #define _DTWI0_BUS_IRQ         _I2C1_BUS_VECTOR
 #define _DTWI0_VECTOR          _I2C1_BUS_VECTOR
@@ -150,6 +180,15 @@ static const uint8_t PIN_DSPI1_SCK    = 13;
 #define _DTWI0_SPL             0
 #define _DTWI0_SCL_PIN         22
 #define _DTWI0_SDA_PIN         21
+
+#define _DTWI1_BASE            _I2C5_BASE_ADDRESS
+#define _DTWI1_BUS_IRQ         _I2C5_BUS_VECTOR
+#define _DTWI1_VECTOR          _I2C5_BUS_VECTOR
+#define _DTWI1_IPL_ISR         IPL3SRS
+#define _DTWI1_IPL             3
+#define _DTWI1_SPL             0
+#define _DTWI1_SCL_PIN         44
+#define _DTWI1_SDA_PIN         43
 
 #define _PORTA
 #define _PORTB
