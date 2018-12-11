@@ -1,0 +1,36 @@
+name=gamma-usb
+description=Project Gamma (USB Interface)
+group=Majenko Technologies
+platform=pic32
+board=_BOARD_GAMMA_USB_
+board.flags=-D_USB
+ccflags=-Map="map.map"
+ldscript=gamma-usb.ld
+upload.protocol=stk500v2
+upload.maximum_size=122880
+upload.speed=115200
+build.mcu=32MX270F256B
+build.f_cpu=48000000L
+build.core=pic32
+family=pic32
+version=0.1
+revision=1
+core=chipkit
+manual=
+
+icon.128=icons/majenko128.png
+icon.64=icons/majenko64.png
+icon.48=icons/majenko48.png
+icon.32=icons/majenko32.png
+icon.22=icons/majenko22.png
+icon.16=icons/majenko16.png
+
+options.usb.a_cdcacm.flags=-D__USB_ENABLED__::-D__USB_CDCACM__::-D__SERIAL_IS_USB__
+options.usb.a_cdcacm.name=Serial
+options.usb.b_cdcacm_km.flags=-D__USB_ENABLED__::-D__USB_CDCACM_KM__::-D__SERIAL_IS_USB__
+options.usb.b_cdcacm_km.name=Serial, Keyboard & Mouse
+options.usb.default=z_custom
+options.usb.name=USB
+options.usb.purge=true
+options.usb.z_custom.name=Custom
+
