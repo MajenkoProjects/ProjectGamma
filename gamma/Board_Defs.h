@@ -36,7 +36,7 @@ extern const uint8_t    digital_pin_to_pps_in_PGM[];
 #define _BOARD_NAME_ "Project Gamma"
 
 #define NUM_DIGITAL_PINS     45
-#define NUM_ANALOG_PINS      10
+#define NUM_ANALOG_PINS      11
 #define NUM_OC_PINS          9
 #define NUM_IC_PINS          0
 #define NUM_TCK_PINS         0
@@ -64,23 +64,24 @@ extern const uint8_t    digital_pin_to_pps_in_PGM[];
 #define PIN_INT3             3
 #define PIN_INT4             18
 
-#define PIN_BACKLIGHT             29
-#define PIN_TEAR             30
-#define PIN_UP             35
-#define PIN_BSIG             28
-#define PIN_DOWN             36
-#define PIN_BM1             33
-#define PIN_RESET             31
-#define PIN_BM2             34
-#define PIN_RIGHT             38
-#define PIN_LEFT             37
-#define PIN_SD_CS             39
 #define PIN_BM0             32
+#define PIN_DOWN             36
+#define PIN_LEFT             37
+#define PIN_BSIG             28
+#define PIN_SD_CS             39
+#define PIN_RIGHT             38
+#define PIN_BM2             34
+#define PIN_RESET             31
+#define PIN_UP             35
+#define PIN_TEAR             30
+#define PIN_BACKLIGHT             29
+#define PIN_BM1             33
 
 static const uint8_t A0     = 14;
 static const uint8_t A1     = 15;
 static const uint8_t A2     = 16;
 static const uint8_t A3     = 17;
+static const uint8_t A4     = 18;
 static const uint8_t A5     = 19;
 static const uint8_t A6     = 20;
 static const uint8_t A7     = 35;

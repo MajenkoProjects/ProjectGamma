@@ -193,8 +193,8 @@ const uint16_t digital_pin_to_timer_PGM[] = {
     _TIMER_OC4,   // 16: RB3
     _TIMER_OC7,   // 16: RB3
     NOT_ON_TIMER,   // 17: RB2
-    _TIMER_OC7,   // 18: RB1
     _TIMER_OC4,   // 18: RB1
+    _TIMER_OC7,   // 18: RB1
     NOT_ON_TIMER,   // 19: RB0
     NOT_ON_TIMER,   // 20: RA10
     NOT_ON_TIMER,   // 21: RA15
@@ -242,7 +242,7 @@ const uint8_t digital_pin_to_analog_PGM[] = {
     _BOARD_AN1,   // 15: RB4
     _BOARD_AN2,   // 16: RB3
     _BOARD_AN3,   // 17: RB2
-    NOT_ANALOG_PIN,   // 18: RB1
+    _BOARD_AN4,   // 18: RB1
     _BOARD_AN5,   // 19: RB0
     _BOARD_AN6,   // 20: RA10
     NOT_ANALOG_PIN,   // 21: RA15
@@ -276,7 +276,7 @@ const uint8_t analog_pin_to_channel_PGM[] = {
     4,     // A1 => AN4 (RB4, 15)
     3,     // A2 => AN3 (RB3, 16)
     2,     // A3 => AN2 (RB2, 17)
-    NOT_ANALOG_PIN,
+    1,     // A4 => AN1 (RB1, 18)
     0,     // A5 => AN0 (RB0, 19)
     28,     // A6 => AN28 (RA10, 20)
     27,     // A7 => AN27 (RA9, 35)

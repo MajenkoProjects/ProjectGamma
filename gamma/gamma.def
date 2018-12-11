@@ -24,7 +24,7 @@ RB5     A0
 RB4     A1
 RB3     A2  OC4 OC7
 RB2     A3
-RB1     A4A INT4    OC4 OC7
+RB1     A4  INT4    OC4 OC7
 RB0     A5
 
 # Extra pins AREF SDA SCL
