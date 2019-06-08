@@ -62,7 +62,7 @@ INPUT("processor.o")
  * Processor-specific peripheral libraries are optional
  *************************************************************************/
 OPTIONAL("libmchp_peripheral.a")
-OPTIONAL("libmchp_peripheral_32MZ2048EFG064.a")
+OPTIONAL("libmchp_peripheral_32MZ2048ECH100.a")
 
 /*************************************************************************
  * Vector-offset initialization
@@ -307,6 +307,23 @@ _imageExecutionJumpToFirstInFlash   = 0x02000000 ;  /* the bootloader will jump 
  _IMAGE_TYPE            = _imageMPIDE | _imageJustInTimeFlashErase | _imageExecutionJumpAddress;
  _IMAGE_FLASH_SIZE      = LENGTH(kseg0_vector_mem) + LENGTH(kseg0_program_mem);
  _JUMP_ADDR             = _RESET_ADDR;
+
+
+SECTIONS
+{
+  .config_BFC0FFC0 : {
+    LONG(0x86FFFFFF)
+  } > config_BFC0FFC0
+  .config_BFC0FFC4 : {
+    LONG(0xFFF9B11A)
+  } > config_BFC0FFC4
+  .config_BFC0FFC8 : {
+    LONG(0x7F7F3CB9)
+  } > config_BFC0FFC8
+  .config_BFC0FFCC : {
+    LONG(0xFFEBCFF3)
+  } > config_BFC0FFCC
+}
 
 
 /* From here out every linker script is the same, so just include it */

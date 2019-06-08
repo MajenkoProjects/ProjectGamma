@@ -5,7 +5,8 @@ platform=pic32
 board=_BOARD_GAMMA_USB_
 board.flags=-D_USB
 ccflags=-Map="map.map"
-ldscript=gamma-usb.ld
+ldscript=chipKIT-application-32MX270F256.ld
+#ldscript=gamma-usb.ld
 upload.protocol=stk500v2
 upload.maximum_size=122880
 upload.speed=115200

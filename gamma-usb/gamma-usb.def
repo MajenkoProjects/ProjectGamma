@@ -1,0 +1,12 @@
+# Chip: pic32mx270f256b
+# Name: Project Gamma (USB)
+
+# Pins 0-7
+RB8 S0RX2
+RB9 S0TX2
+RB7
+RB5
+RB4 PIN_LED_RX LED1
+RA4 PIN_LED_TX LED2
+RB0
+RB1

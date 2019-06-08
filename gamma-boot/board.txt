@@ -1,0 +1,23 @@
+name=gamma-boot
+description=Project Gamma (Bootloader)
+group=Majenko Technologies
+
+platform=pic32
+board=_BOARD_MAJENKO_GAMMA_
+board.define=
+ccflags=ffff
+
+upload.protocol=stk500v2
+upload.maximum_size=520192
+upload.speed=115200
+
+build.mcu=32MZ2048EFG100
+build.f_cpu=200000000UL
+build.core=chipkit
+core=chipkit
+ldcommon=chipKIT-application-COMMON-MZ-bootseg.ld
+ldscript=MZ-application-32MZ2048EFG-bootseg.ld
+
+family=pic32
+
+build.files=EFADC.c
