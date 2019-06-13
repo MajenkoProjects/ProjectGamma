@@ -35,7 +35,7 @@ extern const uint8_t    digital_pin_to_pps_in_PGM[];
 
 #define _BOARD_NAME_ "Project Gamma (USB)"
 
-#define NUM_DIGITAL_PINS     8
+#define NUM_DIGITAL_PINS     11
 #define NUM_ANALOG_PINS      0
 #define NUM_OC_PINS          0
 #define NUM_IC_PINS          0
@@ -61,8 +61,17 @@ extern const uint8_t    digital_pin_to_pps_in_PGM[];
 #define PIN_LED2             5
 
 
-#define PIN_LED_RX             4
+#define PIN_TX             1
+#define PIN_PGD             7
+#define PIN_RX             0
+#define PIN_ICSP_PGC             9
 #define PIN_LED_TX             5
+#define PIN_DTR             3
+#define PIN_BOOT             10
+#define PIN_PGC             6
+#define PIN_ICSP_PGD             8
+#define PIN_LED_RX             4
+#define PIN_RTS             2
 
 
 
