@@ -133,6 +133,26 @@ const uint8_t digital_pin_to_port_PGM[] = {
     _IOPORT_PC,    // 52: RC15
     _IOPORT_PB,    // 53: RB6
     _IOPORT_PB,    // 54: RB7
+    _IOPORT_PE,    // 55: RE0
+    _IOPORT_PE,    // 56: RE1
+    _IOPORT_PE,    // 57: RE2
+    _IOPORT_PE,    // 58: RE3
+    _IOPORT_PE,    // 59: RE4
+    _IOPORT_PE,    // 60: RE5
+    _IOPORT_PE,    // 61: RE6
+    _IOPORT_PE,    // 62: RE7
+    _IOPORT_PG,    // 63: RG0
+    _IOPORT_PG,    // 64: RG1
+    _IOPORT_PF,    // 65: RF1
+    _IOPORT_PF,    // 66: RF0
+    _IOPORT_PD,    // 67: RD12
+    _IOPORT_PD,    // 68: RD13
+    _IOPORT_PD,    // 69: RD2
+    _IOPORT_PD,    // 70: RD3
+    _IOPORT_PC,    // 71: RC3
+    _IOPORT_PC,    // 72: RC4
+    _IOPORT_PB,    // 73: RB15
+    _IOPORT_PA,    // 74: RA2
 };
 
 const uint16_t digital_pin_to_bit_mask_PGM[] = {
@@ -191,6 +211,26 @@ const uint16_t digital_pin_to_bit_mask_PGM[] = {
     _BV(15),   // 52: RC15
     _BV(6),   // 53: RB6
     _BV(7),   // 54: RB7
+    _BV(0),   // 55: RE0
+    _BV(1),   // 56: RE1
+    _BV(2),   // 57: RE2
+    _BV(3),   // 58: RE3
+    _BV(4),   // 59: RE4
+    _BV(5),   // 60: RE5
+    _BV(6),   // 61: RE6
+    _BV(7),   // 62: RE7
+    _BV(0),   // 63: RG0
+    _BV(1),   // 64: RG1
+    _BV(1),   // 65: RF1
+    _BV(0),   // 66: RF0
+    _BV(12),   // 67: RD12
+    _BV(13),   // 68: RD13
+    _BV(2),   // 69: RD2
+    _BV(3),   // 70: RD3
+    _BV(3),   // 71: RC3
+    _BV(4),   // 72: RC4
+    _BV(15),   // 73: RB15
+    _BV(2),   // 74: RA2
 };
 
 const uint16_t digital_pin_to_timer_PGM[] = {
@@ -210,8 +250,8 @@ const uint16_t digital_pin_to_timer_PGM[] = {
     NOT_ON_TIMER,   // 13: RB14
     NOT_ON_TIMER,   // 14: RB5
     NOT_ON_TIMER,   // 15: RB4
-    _TIMER_OC7,   // 16: RB3
     _TIMER_OC4,   // 16: RB3
+    _TIMER_OC7,   // 16: RB3
     NOT_ON_TIMER,   // 17: RB2
     _TIMER_OC7,   // 18: RB1
     _TIMER_OC4,   // 18: RB1
@@ -251,6 +291,26 @@ const uint16_t digital_pin_to_timer_PGM[] = {
     NOT_ON_TIMER,   // 52: RC15
     NOT_ON_TIMER,   // 53: RB6
     NOT_ON_TIMER,   // 54: RB7
+    NOT_ON_TIMER,   // 55: RE0
+    NOT_ON_TIMER,   // 56: RE1
+    NOT_ON_TIMER,   // 57: RE2
+    NOT_ON_TIMER,   // 58: RE3
+    NOT_ON_TIMER,   // 59: RE4
+    NOT_ON_TIMER,   // 60: RE5
+    NOT_ON_TIMER,   // 61: RE6
+    NOT_ON_TIMER,   // 62: RE7
+    NOT_ON_TIMER,   // 63: RG0
+    NOT_ON_TIMER,   // 64: RG1
+    NOT_ON_TIMER,   // 65: RF1
+    NOT_ON_TIMER,   // 66: RF0
+    NOT_ON_TIMER,   // 67: RD12
+    NOT_ON_TIMER,   // 68: RD13
+    NOT_ON_TIMER,   // 69: RD2
+    NOT_ON_TIMER,   // 70: RD3
+    NOT_ON_TIMER,   // 71: RC3
+    NOT_ON_TIMER,   // 72: RC4
+    NOT_ON_TIMER,   // 73: RB15
+    NOT_ON_TIMER,   // 74: RA2
 };
 
 const uint8_t digital_pin_to_analog_PGM[] = {
@@ -309,6 +369,26 @@ const uint8_t digital_pin_to_analog_PGM[] = {
     NOT_ANALOG_PIN,   // 52: RC15
     NOT_ANALOG_PIN,   // 53: RB6
     NOT_ANALOG_PIN,   // 54: RB7
+    NOT_ANALOG_PIN,   // 55: RE0
+    NOT_ANALOG_PIN,   // 56: RE1
+    NOT_ANALOG_PIN,   // 57: RE2
+    NOT_ANALOG_PIN,   // 58: RE3
+    NOT_ANALOG_PIN,   // 59: RE4
+    NOT_ANALOG_PIN,   // 60: RE5
+    NOT_ANALOG_PIN,   // 61: RE6
+    NOT_ANALOG_PIN,   // 62: RE7
+    NOT_ANALOG_PIN,   // 63: RG0
+    NOT_ANALOG_PIN,   // 64: RG1
+    NOT_ANALOG_PIN,   // 65: RF1
+    NOT_ANALOG_PIN,   // 66: RF0
+    NOT_ANALOG_PIN,   // 67: RD12
+    NOT_ANALOG_PIN,   // 68: RD13
+    NOT_ANALOG_PIN,   // 69: RD2
+    NOT_ANALOG_PIN,   // 70: RD3
+    NOT_ANALOG_PIN,   // 71: RC3
+    NOT_ANALOG_PIN,   // 72: RC4
+    NOT_ANALOG_PIN,   // 73: RB15
+    NOT_ANALOG_PIN,   // 74: RA2
 };
 
 const uint8_t analog_pin_to_channel_PGM[] = {
@@ -348,8 +428,8 @@ const  uint8_t digital_pin_to_pps_out_PGM[] = {
     _PPS_OUT(_PPS_RPB1R),
     _PPS_OUT(_PPS_RPB0R),
     NOT_PPS_PIN,
-    NOT_PPS_PIN,           
-    NOT_PPS_PIN,           
+    _PPS_OUT(_PPS_RPA15R),
+    _PPS_OUT(_PPS_RPA14R),
     _PPS_OUT(_PPS_RPC13R),
     _PPS_OUT(_PPS_RPD11R),
     _PPS_OUT(_PPS_RPD10R),
@@ -382,6 +462,26 @@ const  uint8_t digital_pin_to_pps_out_PGM[] = {
     NOT_PPS_PIN,
     _PPS_OUT(_PPS_RPB6R),
     _PPS_OUT(_PPS_RPB7R),
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    _PPS_OUT(_PPS_RPE3R),
+    NOT_PPS_PIN,
+    _PPS_OUT(_PPS_RPE5R),
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    _PPS_OUT(_PPS_RPG0R),
+    _PPS_OUT(_PPS_RPG1R),
+    _PPS_OUT(_PPS_RPF1R),
+    _PPS_OUT(_PPS_RPF0R),
+    _PPS_OUT(_PPS_RPD12R),
+    NOT_PPS_PIN,
+    _PPS_OUT(_PPS_RPD2R),
+    _PPS_OUT(_PPS_RPD3R),
+    _PPS_OUT(_PPS_RPC3R),
+    _PPS_OUT(_PPS_RPC4R),
+    _PPS_OUT(_PPS_RPB15R),
+    NOT_PPS_PIN,
 };
 
 const  uint8_t digital_pin_to_pps_in_PGM[] = {
@@ -440,6 +540,26 @@ const  uint8_t digital_pin_to_pps_in_PGM[] = {
     NOT_PPS_PIN,
     _PPS_IN(_PPS_RPB6),
     _PPS_IN(_PPS_RPB7),
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    _PPS_IN(_PPS_RPE3),
+    NOT_PPS_PIN,
+    _PPS_IN(_PPS_RPE5),
+    NOT_PPS_PIN,
+    NOT_PPS_PIN,
+    _PPS_IN(_PPS_RPG0),
+    _PPS_IN(_PPS_RPG1),
+    _PPS_IN(_PPS_RPF1),
+    _PPS_IN(_PPS_RPF0),
+    _PPS_IN(_PPS_RPD12),
+    NOT_PPS_PIN,
+    _PPS_IN(_PPS_RPD2),
+    _PPS_IN(_PPS_RPD3),
+    _PPS_IN(_PPS_RPC3),
+    _PPS_IN(_PPS_RPC4),
+    _PPS_IN(_PPS_RPB15),
+    NOT_PPS_PIN,
 };
 
 const uint8_t output_compare_to_digital_pin_PGM[] = {

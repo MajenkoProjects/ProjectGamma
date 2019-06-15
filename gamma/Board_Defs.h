@@ -35,7 +35,7 @@ extern const uint8_t    digital_pin_to_pps_in_PGM[];
 
 #define _BOARD_NAME_ "Project Gamma"
 
-#define NUM_DIGITAL_PINS     55
+#define NUM_DIGITAL_PINS     75
 #define NUM_ANALOG_PINS      11
 #define NUM_OC_PINS          9
 #define NUM_IC_PINS          0
@@ -66,60 +66,80 @@ extern const uint8_t    digital_pin_to_pps_in_PGM[];
 #define PIN_INT3             3
 #define PIN_INT4             18
 
-#define PIN_A5             19
-#define PIN_SD_MISO             41
-#define PIN_D5             5
 #define PIN_DAC_SDA             43
-#define PIN_BACKLIGHT             29
-#define PIN_A0             14
-#define PIN_D0             0
-#define PIN_UP             35
-#define PIN_SPI_MISO             24
-#define PIN_DAC_SCL             44
-#define PIN_A2             16
-#define PIN_D2             2
-#define PIN_D12             12
-#define PIN_AREF             20
-#define PIN_BM1             33
-#define PIN_D7             7
-#define PIN_DOWN             36
-#define PIN_D10             10
-#define PIN_D9             9
-#define PIN_UTX             27
-#define PIN_SPI_SCK             25
-#define PIN_DO             45
-#define PIN_D8             8
-#define PIN_D4             4
-#define PIN_DAC_RESET             49
-#define PIN_A4             18
-#define PIN_BCLK             47
-#define PIN_SD_SCK             42
-#define PIN_SPI_MOSI             23
-#define PIN_D6             6
-#define PIN_OSCEN             52
-#define PIN_BM2             34
-#define PIN_RIGHT             38
-#define PIN_SD_MOSI             40
-#define PIN_LEFT             37
-#define PIN_BM0             32
-#define PIN_URX             26
-#define PIN_SD_CS             39
-#define PIN_USER             50
-#define PIN_D11             11
-#define PIN_BSIG             28
-#define PIN_D13             13
-#define PIN_ICSP_DAT             54
 #define PIN_ICSP_CLK             53
-#define PIN_SCL             22
-#define PIN_A3             17
-#define PIN_SDA             21
-#define PIN_D3             3
-#define PIN_A1             15
-#define PIN_WCLK             48
-#define PIN_TEAR             30
-#define PIN_D1             1
+#define PIN_BD13             68
+#define PIN_BD7             62
+#define PIN_USER             50
+#define PIN_D9             9
+#define PIN_UP             35
 #define PIN_MCLK             46
+#define PIN_D6             6
+#define PIN_SCL             22
+#define PIN_OSCEN             52
+#define PIN_BWR             71
+#define PIN_BRD             72
+#define PIN_D2             2
+#define PIN_BACKLIGHT             29
+#define PIN_BD4             59
+#define PIN_SPI_MISO             24
+#define PIN_A4             18
 #define PIN_RESET             31
+#define PIN_BD5             60
+#define PIN_A5             19
+#define PIN_A3             17
+#define PIN_RIGHT             38
+#define PIN_BCS0             74
+#define PIN_D8             8
+#define PIN_BSIG             28
+#define PIN_TEAR             30
+#define PIN_SPI_MOSI             23
+#define PIN_BD6             61
+#define PIN_SD_MOSI             40
+#define PIN_D1             1
+#define PIN_A0             14
+#define PIN_ICSP_DAT             54
+#define PIN_DOWN             36
+#define PIN_D11             11
+#define PIN_BD0             55
+#define PIN_BD10             65
+#define PIN_D12             12
+#define PIN_DO             45
+#define PIN_URX             26
+#define PIN_BM0             32
+#define PIN_UTX             27
+#define PIN_D4             4
+#define PIN_BD8             63
+#define PIN_A2             16
+#define PIN_BCLK             47
+#define PIN_AREF             20
+#define PIN_SD_MISO             41
+#define PIN_BD3             58
+#define PIN_BA0             73
+#define PIN_BD15             70
+#define PIN_DAC_SCL             44
+#define PIN_D3             3
+#define PIN_LEFT             37
+#define PIN_D5             5
+#define PIN_BM1             33
+#define PIN_BD14             69
+#define PIN_D7             7
+#define PIN_BM2             34
+#define PIN_D13             13
+#define PIN_A1             15
+#define PIN_BD11             66
+#define PIN_BD1             56
+#define PIN_BD9             64
+#define PIN_SDA             21
+#define PIN_D10             10
+#define PIN_D0             0
+#define PIN_SPI_SCK             25
+#define PIN_DAC_RESET             49
+#define PIN_BD2             57
+#define PIN_SD_SCK             42
+#define PIN_BD12             67
+#define PIN_SD_CS             39
+#define PIN_WCLK             48
 
 static const uint8_t A0     = 14;
 static const uint8_t A1     = 15;
@@ -256,6 +276,7 @@ static const uint8_t PIN_DSPI3_SCK    = 47;
 #define _DTWI1_SCL_PIN         44
 #define _DTWI1_SDA_PIN         43
 
+#define _PORTA
 #define _PORTB
 #define _PORTC
 #define _PORTD
