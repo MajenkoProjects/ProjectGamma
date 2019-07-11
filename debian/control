@@ -1,0 +1,34 @@
+Source: projectgamma
+Section: main
+Priority: extra
+Maintainer: Matt Jenkins <matt@majenko.co.uk>
+Build-Depends: debhelper (>= 8.0.0)
+Family: pic32
+Standards-Version: 3.9.4
+
+Package: majenko-gamma
+Architecture: all
+XBSC-Group: Boards
+XBSC-Subgroup: Majenko Technologies
+Depends: chipkit
+Recommends: libdisplaycore-driver-gamma, libi2s-chipkit, libtlv320dac3101-chipkit
+Description: Project Gamma
+
+Package: majenko-gamma-boot
+Architecture: all
+XBSC-Group: Boards
+XBSC-SubGroup: Majenko Technologies
+XBSC-SubSubgroup: Extra
+Depends: chipkit
+Description: Project Gamma (Bootloader)
+
+Package: majenko-gamma-usb
+Architecture: all
+XBSC-Group: Boards
+XBSC-SubGroup: Majenko Technologies
+XBSC-SubSubgroup: Extra
+Depends: chipkit
+Description: Project Gamma (USB Interface)
+
+
+
